@@ -6,8 +6,17 @@ export default defineConfig({
   plugins: [
     react({
       babel: {
-        plugins: [['babel-plugin-react-compiler']],
+        plugins: [["babel-plugin-react-compiler"]],
       },
     }),
   ],
-})
+
+  server: {
+    host: true,
+    port: 5173,
+  },
+
+  build: {
+    target: "es2020",
+  },
+});
