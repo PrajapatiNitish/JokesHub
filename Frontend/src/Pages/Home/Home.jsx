@@ -1,7 +1,9 @@
+import homeStyle from './Home.module.scss'
+
 export default function Home() {
   return (
     <>
-      <div className="golbal-homepage">
+      <div className={homeStyle.global_homepage}>
         {/* Write a beautiful quotes. */}
         <div className="quotes">Laugh as you can</div>
 
@@ -10,7 +12,9 @@ export default function Home() {
 
         {/* Jokes */}
         <div className="Jokes-div">
-          <div className="Jokes">Jokes 😂😂😂 | and Some funny aimated emojy</div>
+          <div className="Jokes">
+            Jokes 😂😂😂 | and Some funny aimated emojy
+          </div>
 
           <div className="buttons">
             <div className="new-joke-btn">New Jokes Button</div>
@@ -31,8 +35,6 @@ export default function Home() {
             <div className="cate-4">Category-4</div>
           </div>
         </div>
-
-
       </div>
     </>
   );

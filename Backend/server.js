@@ -1,4 +1,4 @@
-import express from "express"; //Import express
+import express, { urlencoded } from "express"; //Import express
 import dotenv from "dotenv"; //Import .env file
 import cors from "cors" //import cors 
 
@@ -8,14 +8,18 @@ dotenv.config();
 //Start to build app
 const app = express();
 
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
+
 //Server is running on this port.
 const port = process.env.PORT;
 
-app.get("/",() => {
-    console.log("server is listening sir .🙄");
+app.get("/", (req, res) => {
+    res.send("Hello from server, 🙄");
 })
 
 //App is listening
 app.listen(port, () => {
-    console.log("App is running...");
+    console.log("Server is running sir...", port);
 })

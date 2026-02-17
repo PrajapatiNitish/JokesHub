@@ -1,0 +1,33 @@
+@mixin width-height($width-val: auto, $height-val: auto) {
+  width: $width-val;
+  height: $height-val;
+}
+
+// Media Querry
+@mixin media($size) {
+    //For Smartphone
+  @if $size == 430px {
+    @media (max-width: 430px) {
+      @content;
+    }
+  }
+
+  //For Tablet
+  @if $size == 1024px {
+    @media (max-width: 430px) and (min-width: 1024px) {
+      @content;
+    }
+  }
+}
+
+//Border Styling
+@mixin border($border: none, $radius: 20px) {
+  border: $border;
+  border-radius: $radius;
+}
+
+//Font Styling
+@mixin font($font:12px, $weight:100) {
+  font-size: $font;
+  font-weight: $weight;
+}
