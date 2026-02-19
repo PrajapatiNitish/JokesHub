@@ -3,6 +3,7 @@ import homeStyle from './Home.module.scss'
 export default function Home() {
   return (
     <>
+      {/* Entery point of homepage */}
       <div className={homeStyle.global_homepage}>
         {/* Write a beautiful quotes. */}
         <div className="quotes">Laugh as you can</div>

@@ -2,4 +2,9 @@
 
 .global_homepage {
     background: $primary-color;
+    color: $secondary-color;
+    
+    @include width-height($outer-width,);
+    @include border();
+    @include margin-padding(0, 2.5rem);
 }

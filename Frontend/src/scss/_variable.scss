@@ -1,10 +1,17 @@
-$body-background: #eaeaea; //For body's background
-$primary-color: #fff; //For white colour
+$body-background: #f0f0f0; //For body's background
+$primary-color: #ffffff; //For white colour
 $secondary-color: #000000; //For text colour
 
 $button-background: #2483ff;
 
 
-// Screen size break point
+// Screen size break point for media querry
 $size-sm: 430px;
 $size-md: 1024px;
+
+// Width and height
+$outer-width: 95%;
+$outer-height: 2.5rem;
+
+//Element positions
+$justify-items: center;

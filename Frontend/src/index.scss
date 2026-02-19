@@ -11,9 +11,13 @@ body {
     
     // root id will be take 85% width of body.
     #root {
+        @include g.width-height(100%, 100%);
+        @include g.display();
+        
         color: g.$secondary-color;
 
-        @include g.width-height(100%, 100%);
-        @include g.border();
+        align-items: g.$justify-items;
+
+        gap: 2.5rem;
     }
 }

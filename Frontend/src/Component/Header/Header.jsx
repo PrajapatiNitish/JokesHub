@@ -1,11 +1,14 @@
-import headerStyle from "./Header.module.scss";
+import headerStyle from './Header.module.scss';
 
 export default function Header() {
   return (
     <>
-      <div className={headerStyle.golbal_header}>
-        <div className="global-header-name">JokesHub</div>
-        <div className="sign-up">Sign Up</div>
+      {/* Entery point of Header */}
+      <div className={headerStyle.global_header}>
+        <div className={headerStyle.global_header_name}>JokesHub</div>
+
+        {/* Navbar */}
+        <div className={headerStyle.sign_up}>Sign Up</div>
       </div>
     </>
   );
