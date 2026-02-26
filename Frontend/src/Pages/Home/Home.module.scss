@@ -1,10 +1,102 @@
 @use "../../scss/global.scss" as *;
 
 .global_homepage {
-    background: $primary-color;
-    color: $secondary-color;
-    
-    @include width-height($outer-width,);
-    @include border();
-    @include margin-padding(0, 2.5rem);
+  background: $primary-color;
+  color: $secondary-color;
+
+  backdrop-filter: blur(18px), saturate(180%);
+
+  @include width-height($outer-width);
+  @include border($border);
+  @include margin-padding($outer-margin);
+  @include display();
+
+  //Quotes section
+  .quotes {
+    align-self: center;
+
+    @include font(18px, 600);
+    @include margin-padding($padding: $inner-padding);
+  }
+
+  //Jokes and animated emojy sections.
+  .jokes {
+    @include display(grid);
+    grid-template-columns: 1.25fr 0.75fr;
+
+    @include media($size-sm) {
+      @include display($flex-direction: column);
+    }
+
+    // Styling emojy
+    .anim_emoji {
+      order: 2;
+      @include margin-padding($padding: $inner-padding);
+      @include width-height(50%);
+
+      @include media($size-sm) {
+        order: 1;
+        @include width-height(100%);
+      }
+    }
+
+    //Jokes text
+    .jokes_part {
+      order: 1;
+      @include margin-padding($padding: $inner-padding);
+
+      @include media($size-sm) {
+        order: 2;
+      }
+
+      .jokes_language {
+        @include margin-padding($padding: $inner-padding);
+      }
+
+      .jokes_container {
+        @include margin-padding($padding: $inner-padding);
+
+        @include media($size-sm) {
+          @include margin-padding($padding: 0);
+        }
+
+        .jokes_line {
+          min-height: 15rem;
+
+          @include margin-padding($padding: $inner-padding);
+          @include border($border);
+          @include width-height(90%);
+
+          @include media($size-sm) {
+            @include width-height(100%);
+          }
+        }
+
+        .buttons {
+          @include display($flex-direction: row);
+        }
+      }
+
+      .catogery_container {
+        @include margin-padding($inner-margin);
+
+        .category_div {
+          @include display($flex-direction: row);
+
+          .search_category {
+            @include width-height(75%);
+            @include margin-padding($padding: $inner-padding);
+            @include border($border);
+          }
+
+          @include media($size-sm) {
+            @include width-height(100%);
+          }
+        }
+
+        .category_suggestion {
+        }
+      }
+    }
+  }
 }

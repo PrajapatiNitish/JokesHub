@@ -1,3 +1,10 @@
+//Font Styling
+@mixin font($font: 12px, $weight: 100) {
+  font-size: $font;
+  font-weight: $weight;
+  line-height: 1.5;
+}
+  
 //Set width-height
 @mixin width-height($width-val: auto, $height-val: auto) {
   width: $width-val;
@@ -30,13 +37,7 @@
 //Border Styling
 @mixin border($border: none, $radius: 20px) {
   border: $border;
-  border-radius: $radius;
-}
-
-//Font Styling
-@mixin font($font: 12px, $weight: 100) {
-  font-size: $font;
-  font-weight: $weight;
+  border-radius: $radius; 
 }
 
 //Display direction

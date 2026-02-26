@@ -4,14 +4,15 @@
     background-color: $primary-color;
     @include width-height($outer-width, $outer-height);
     @include display(flex, row);
-    @include margin-padding(10px 0, 2.5rem);
-    @include border(0.5px solid rgba(34, 34, 34, 0.147),);
+    @include margin-padding($outer-margin, $outer-padding);
+    @include border($border,);
 
     justify-content: space-between;
-    align-items: $justify-items;
-}
-
-.global_header_name {
-    color: $secondary-color;
-    @include font(22px, bold); //Only for Logo text
+    align-items: center;
+    
+    //Main logo style on header
+    #global_header_name {
+        color: $secondary-color;
+        @include font(20px, bold); //Only for Logo text
+    }
 }

@@ -1,0 +1,13 @@
+@use "../../scss/global.scss" as *;
+
+.global_button {
+  button {
+    @include margin-padding( 0.75rem 0.5rem , 5px 12px);
+    @include border(0.25px solid rgba(177, 177, 177, 0.575), $radius:10px);
+
+    &:hover {
+        cursor: pointer;
+        @include font($weight:600);
+    }   
+  }
+}

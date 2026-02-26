@@ -1,39 +1,54 @@
-import homeStyle from './Home.module.scss'
+import homeStyle from "./Home.module.scss";
+import Button from "../../Component/Button/Button";
 
 export default function Home() {
+
   return (
     <>
       {/* Entery point of homepage */}
       <div className={homeStyle.global_homepage}>
         {/* Write a beautiful quotes. */}
-        <div className="quotes">Laugh as you can</div>
+        <div className={homeStyle.quotes}>Keep Laughing...</div>
 
-        {/* Choose languages for jokes */}
-        <div className="jokes-language">Jokes-Language</div>
+        <div className={homeStyle.jokes}>
+          <div className={homeStyle.anim_emoji}>😁</div>
 
-        {/* Jokes */}
-        <div className="Jokes-div">
-          <div className="Jokes">
-            Jokes 😂😂😂 | and Some funny aimated emojy
-          </div>
+          {/* Choose languages for jokes */}
+          <div className={homeStyle.jokes_part}>
+            <div className={homeStyle.jokes_language}>
+              Jokes-Language :
+              <br />
+              Hindi | English | Kannada | Telgue | Marathi
+            </div>
 
-          <div className="buttons">
-            <div className="new-joke-btn">New Jokes Button</div>
-            <div className="copy-btn">Copy Button</div>
-          </div>
-        </div>
+            {/* Jokes */}
+            <div className={homeStyle.jokes_container}>
+              <div className={homeStyle.jokes_line}>Jokes 😂😂😂</div>
 
-        {/* Choose category of jokes */}
-        <div className="category-div">
-          <div className="search-category">Search Category</div>
-          <div className="search-btn">Search Button</div>
-          {/* Suggest some category */}
-          <div className="category-suggestion">
-            <h1>Category</h1>
-            <div className="cate-1">Category-1</div>
-            <div className="cate-2">Category-2</div>
-            <div className="cate-3">Category-3</div>
-            <div className="cate-4">Category-4</div>
+              {/* Buttons */}
+              <div className={homeStyle.buttons}>
+                <Button buttonName={"New Jokes"} />
+                
+                <Button buttonName={"Copy Jokes"}/>
+              </div>
+            </div>
+
+            <div className={homeStyle.catogery_container}>
+              {/* Choose category of jokes */}
+              <div className={homeStyle.category_div}>
+                <div className={homeStyle.search_category}>Search Category</div>
+                <Button buttonName={"Search"}/>
+              </div>
+
+              {/* Suggest some category */}
+              <div className={homeStyle.category_suggestion}>
+                <h1>Category</h1>
+                <div className="cate-1">Category-1</div>
+                <div className="cate-2">Category-2</div>
+                <div className="cate-3">Category-3</div>
+                <div className="cate-4">Category-4</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
