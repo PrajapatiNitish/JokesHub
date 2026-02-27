@@ -52,7 +52,10 @@ export default function Footer() {
         </div>
 
         <div className={footerStyle.feedback}>
-          <AnchorTag anchorName={"Give me your valuable feedback. | Click Me"} anchorLink={"./Feedback"} />
+          <AnchorTag 
+            anchorName={"Give me your valuable feedback. | Click Me"} 
+            anchorLink={"./Feedback"} 
+          />
         </div>
 
         {/* copyright */}

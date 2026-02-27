@@ -2,8 +2,9 @@
 
 .global_button {
   button {
+    color: $secondary-color;
     @include margin-padding( 0.75rem 0.5rem , 5px 12px);
-    @include border(0.25px solid rgba(177, 177, 177, 0.575), $radius:10px);
+    @include border($button-border, $radius:10px);
 
     &:hover {
         cursor: pointer;

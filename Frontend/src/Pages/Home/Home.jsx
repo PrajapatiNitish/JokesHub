@@ -1,14 +1,14 @@
 import homeStyle from "./Home.module.scss";
 import Button from "../../Component/Button/Button";
+import Category from "../../Component/Category/Category";
 
 export default function Home() {
-
   return (
     <>
       {/* Entery point of homepage */}
       <div className={homeStyle.global_homepage}>
         {/* Write a beautiful quotes. */}
-        <div className={homeStyle.quotes}>Keep Laughing...</div>
+        <h2 className={homeStyle.quotes}>Laugh without any reason</h2>
 
         <div className={homeStyle.jokes}>
           <div className={homeStyle.anim_emoji}>😁</div>
@@ -28,25 +28,30 @@ export default function Home() {
               {/* Buttons */}
               <div className={homeStyle.buttons}>
                 <Button buttonName={"New Jokes"} />
-                
-                <Button buttonName={"Copy Jokes"}/>
+
+                <Button buttonName={"Copy Jokes"} />
               </div>
             </div>
 
             <div className={homeStyle.catogery_container}>
               {/* Choose category of jokes */}
               <div className={homeStyle.category_div}>
-                <div className={homeStyle.search_category}>Search Category</div>
-                <Button buttonName={"Search"}/>
+                <input type="text" name="Search" className={homeStyle.search_category} />
+                <Button buttonName={"Search"} />
               </div>
 
               {/* Suggest some category */}
               <div className={homeStyle.category_suggestion}>
-                <h1>Category</h1>
-                <div className="cate-1">Category-1</div>
-                <div className="cate-2">Category-2</div>
-                <div className="cate-3">Category-3</div>
-                <div className="cate-4">Category-4</div>
+                <h3 id={homeStyle.category_heading}>Categories : </h3>
+                <div className={homeStyle.categories}>
+                  <Category CategoryType={"Category-1"} />
+
+                  <Category CategoryType={"Category-2"} />
+
+                  <Category CategoryType={"Category-3"} />
+
+                  <Category CategoryType={"Category-4"} />
+                </div>
               </div>
             </div>
           </div>

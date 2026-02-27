@@ -80,13 +80,17 @@
       .catogery_container {
         @include margin-padding($inner-margin);
 
+        @include media($size-sm) {
+          @include margin-padding(0.25rem);
+        };
+
         .category_div {
           @include display($flex-direction: row);
 
           .search_category {
             @include width-height(75%);
             @include margin-padding($padding: $inner-padding);
-            @include border($border);
+            @include border($border, 25px);
           }
 
           @include media($size-sm) {
@@ -95,6 +99,26 @@
         }
 
         .category_suggestion {
+          @include margin-padding($padding:$inner-padding);
+
+          @include media($size-sm) {
+             @include margin-padding($padding:0.25rem);
+          }
+
+          #category_heading {
+            @include font($weight: 600);
+          }
+
+          .categories {
+            @include width-height(80%);
+            @include margin-padding(0.25rem 0);
+            @include display(grid, );
+            grid-template-columns: 0.25fr 0.25fr 0.25fr;
+
+            @include media($size-sm) {
+              @include width-height(100%);
+            }
+          }
         }
       }
     }

@@ -1,1 +1,19 @@
 @use "../../scss/global.scss" as *;
+
+.category_container {
+    @include border($button-border, 11px);
+    @include margin-padding(0.5rem , 0.5rem 0.25rem);
+    @include display();
+
+    text-wrap: nowrap;
+    align-items: center;
+
+    &:hover {
+        background: $body-background;
+        cursor: pointer;
+    }
+
+    @include media($size-sm) {
+     @include margin-padding(0.5rem , 0.5rem 0.5rem);   
+    }
+}
