@@ -1,6 +1,7 @@
 import homeStyle from "./Home.module.scss";
 import Button from "../../Component/Button/Button";
 import Category from "../../Component/Category/Category";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 export default function Home() {
   return (
@@ -11,19 +12,29 @@ export default function Home() {
         <h2 className={homeStyle.quotes}>Laugh without any reason</h2>
 
         <div className={homeStyle.jokes}>
-          <div className={homeStyle.anim_emoji}>😁</div>
+          <div className={homeStyle.anim_emoji}>
+            <DotLottieReact
+              src="https://lottie.host/ff574a87-20e5-4249-9299-7af39f070d81/8cQLfwXSwR.lottie"
+              loop
+              autoplay
+              className={homeStyle.anim}
+            />
+          </div>
 
           {/* Choose languages for jokes */}
           <div className={homeStyle.jokes_part}>
             <div className={homeStyle.jokes_language}>
-              Jokes-Language :
-              <br />
-              Hindi | English | Kannada | Telgue | Marathi
+              <h3 className={homeStyle.language_heading}>Jokes Language : </h3>
+
+              <div className={homeStyle.languages}>
+                <Category CategoryType={"Hindi"}/>
+                <Category CategoryType={"English"}/>
+              </div>
             </div>
 
             {/* Jokes */}
             <div className={homeStyle.jokes_container}>
-              <div className={homeStyle.jokes_line}>Jokes 😂😂😂</div>
+              <textarea name="Jokes" id={homeStyle.jokes_line}></textarea>
 
               {/* Buttons */}
               <div className={homeStyle.buttons}>
@@ -36,13 +47,20 @@ export default function Home() {
             <div className={homeStyle.catogery_container}>
               {/* Choose category of jokes */}
               <div className={homeStyle.category_div}>
-                <input type="text" name="Search" className={homeStyle.search_category} />
+                <input
+                  className={homeStyle.search_category}
+                  type="text"
+                  name="Search"
+                  value={"Search Categories"}
+                  minLength={1}
+                  required
+                />
                 <Button buttonName={"Search"} />
               </div>
 
               {/* Suggest some category */}
               <div className={homeStyle.category_suggestion}>
-                <h3 id={homeStyle.category_heading}>Categories : </h3>
+                <h3 className={homeStyle.category_heading}>Categories : </h3>
                 <div className={homeStyle.categories}>
                   <Category CategoryType={"Category-1"} />
 

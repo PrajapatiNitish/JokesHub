@@ -28,7 +28,7 @@
 
   //For Tablet
   @if $size == 1024px {
-    @media (max-width: 430px) and (min-width: 1024px) {
+    @media (min-width: 430px) and (max-width: 1024px) {
       @content;
     }
   }

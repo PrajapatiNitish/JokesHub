@@ -32,11 +32,22 @@
     .anim_emoji {
       order: 2;
       @include margin-padding($padding: $inner-padding);
-      @include width-height(50%);
+      @include width-height(100%);
 
       @include media($size-sm) {
         order: 1;
         @include width-height(100%);
+      }
+
+      .anim {
+        @include border();
+        width: 100%;
+        height: 100%;
+        transform: rotateY(180deg);
+
+        @include media($size-sm) {
+          transform: none;
+        }
       }
     }
 
@@ -51,6 +62,28 @@
 
       .jokes_language {
         @include margin-padding($padding: $inner-padding);
+
+        .language_heading {
+          @include font($weight: 600);
+        }
+
+        .languages {
+          @include width-height(90%);
+          @include display(grid);
+          grid-template-columns: 0.25fr 0.25fr 0.25fr;
+
+          //for iPad, tablets
+          @include media($size-md) {
+            @include width-height(100%);
+            grid-template-columns: 0.5fr 0.5fr 0.5fr;
+          }
+
+          //for small screens
+          @include media($size-sm) {
+            @include width-height(100%);
+            grid-template-columns: 0.5fr 0.5fr 0.5fr;
+          }
+        }
       }
 
       .jokes_container {
@@ -60,7 +93,7 @@
           @include margin-padding($padding: 0);
         }
 
-        .jokes_line {
+        #jokes_line {
           min-height: 15rem;
 
           @include margin-padding($padding: $inner-padding);
@@ -82,7 +115,7 @@
 
         @include media($size-sm) {
           @include margin-padding(0.25rem);
-        };
+        }
 
         .category_div {
           @include display($flex-direction: row);
@@ -99,24 +132,32 @@
         }
 
         .category_suggestion {
-          @include margin-padding($padding:$inner-padding);
+          @include margin-padding($padding: $inner-padding);
 
           @include media($size-sm) {
-             @include margin-padding($padding:0.25rem);
+            @include margin-padding($padding: 0.25rem);
           }
 
-          #category_heading {
+          .category_heading {
             @include font($weight: 600);
           }
 
           .categories {
             @include width-height(80%);
             @include margin-padding(0.25rem 0);
-            @include display(grid, );
+            @include display(grid);
             grid-template-columns: 0.25fr 0.25fr 0.25fr;
 
+            //for iPad, tablets
+            @include media($size-md) {
+              @include width-height(100%);
+              grid-template-columns: 0.5fr 0.5fr 0.5fr;
+            }
+
+            //for small screens
             @include media($size-sm) {
               @include width-height(100%);
+              grid-template-columns: 1fr 1fr 1fr;
             }
           }
         }
